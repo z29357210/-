@@ -4053,6 +4053,7 @@ window.onload = function () {
             clear("idq",3);
             clear("ida",4); 
             clear("btn",1);
+            clear("ito",1);
             ts();
         } 
 
