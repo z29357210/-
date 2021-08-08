@@ -3920,10 +3920,12 @@ window.onload = function () {
         
                         
         qsuji = Math.floor( Math.random() * (2 - 1 + 1) ) + 1;//創造挖空隨機數
-    
+           
         for( i=1 ; i <= 4 ; i++ ){ let a ; a = "a" + i };//定義a1-a4
+
         a1 = Array.from(Qarr) ; a2 = arrts()[qsuji] ; a3 = arrts()[qsuji] ; a4 = arrts()[qsuji] ;
         Qarr2 = Array.from(Qarr)
+        if(Qarr2[qsuji] == "外來語"){qsuji = qsuji++}
         Qarr[qsuji] = "";
         Aarr = [ a1[qsuji] , a2, a3 ,a4 ];
 
@@ -4003,6 +4005,10 @@ window.onload = function () {
                     if(text == Qarr2[qsuji]){
                         id.style.backgroundColor = "green";
                         btn.disabled=false;
+                        for( i=0;i<4;i++){
+                            let idanum = document.getElementById("ida" +i);
+                            idanum.onclick = function(){}
+                        }
                         btn.style.color = "black"
                         let idqq = document.getElementById("idq" + qsuji)
                         idqq.innerHTML = Qarr2[qsuji];
@@ -4019,6 +4025,10 @@ window.onload = function () {
                     }else{
                         id.style.backgroundColor = "red";
                         btn.disabled=false;
+                        for( i=0;i<4;i++){
+                            let idanum = document.getElementById("ida" +i);
+                            idanum.onclick = function(){}
+                        }
                         btn.style.color = "black"
                         let idqq = document.getElementById("idq" + qsuji)
                         idqq.innerHTML = Qarr2[qsuji];
