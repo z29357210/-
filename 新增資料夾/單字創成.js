@@ -3965,8 +3965,10 @@ window.onload = function () {
         }
         
         tagsousei(3,"idq",Qarr,"","span");
+        tagsousei(1,"ito","","","div");
         tagsousei(4,"ida",Aarr,"","div");
         tagsousei(1,"btn","","下一題","button");
+        
         
 
         let btn = document.getElementById("btn0");
