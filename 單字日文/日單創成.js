@@ -10025,7 +10025,7 @@ window.onload = function () {
         Qarr2 = Array.from(Qarr)
         Qarr[qsuji] = "";
         Aarr = [ a1[qsuji] , a2, a3 ,a4 ];
-        if(Qarr2[qsuji] == "外來語"){qsuji = qsuji + 1 ;
+        if(Qarr2[qsuji] == "無漢字"){qsuji = qsuji + 1 ;
             a1 = Array.from(Qarr) ; a2 = arrts()[qsuji] ; a3 = arrts()[qsuji] ; a4 = arrts()[qsuji] ;
             Qarr2 = Array.from(Qarr)
             Qarr[qsuji] = "";
