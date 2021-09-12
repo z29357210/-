@@ -127,7 +127,7 @@ window.onload = function () {
         Qarr = arrts();//創造數組
         
                    
-        qsuji = Math.floor( Math.random() * 2 );//創造挖空隨機數
+        qsuji = 1//Math.floor( Math.random()  );//創造挖空隨機數
         
         
     
