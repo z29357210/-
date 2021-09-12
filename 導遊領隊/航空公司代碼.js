@@ -80,10 +80,11 @@ window.onload = function () {
     "天合聯盟",
     "NH",
     "全日空航空公司",
-    "*星空聯盟",
+    "星空聯盟",
     "NX",
     "澳門航空公司",
     "",
+    "SK",
     "北歐航空公司",
     "星空聯盟初始會員",
     "SQ",
@@ -225,7 +226,7 @@ window.onload = function () {
                         idqq.innerHTML = Qarr2[qsuji];
                         idqq.style.backgroundColor = "green";
                         let idq2 = document.getElementById("idq2");
-                        idq2.style.backgroundColor = "white";
+                        
                         let nb = parseInt(jsscore.innerHTML); 
                         nb = nb + one;
                         jsscore.innerHTML = nb;
@@ -237,7 +238,7 @@ window.onload = function () {
                         jsscore3.innerHTML = nb3;
                     }else{
                         let idq2 = document.getElementById("idq2");
-                        idq2.style.backgroundColor = "white";
+                        
                         id.style.backgroundColor = "red";
                         btn.disabled=false;
                         for( i=0;i<4;i++){
