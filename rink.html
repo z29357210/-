@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #2a2a2a, #0f0f0f);
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      display: block;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 15px;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .line {
+      background: linear-gradient(135deg, #06c755, #04a944);
+      box-shadow: 0 8px 20px rgba(6,199,85,0.4);
+      animation: pulse 1.6s infinite;
+    }
+
+    .wechat {
+      background: linear-gradient(135deg, #07c160, #059c4d);
+      box-shadow: 0 8px 20px rgba(7,193,96,0.35);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: #111;
+      padding: 24px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal img {
+      width: 220px;
+      height: 220px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .hint {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 6px;
+    }
+
+    .copy {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: 0.8;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .close {
+      margin-top: 14px;
+      font-size: 14px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="title">Contact Me</div>
+
+      <a class="btn line" href="https://line.me/ti/p/shenken0330" target="_blank">
+        🚀 加我 LINE(東京宅建士Shin)
+      </a>
+
+      <div class="btn wechat" onclick="openModal()">
+        💬 加我 WeChat
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WeChat Modal -->
+  <div class="modal" id="wechatModal">
+    <div class="modal-content">
+      <img src="https://via.placeholder.com/220" alt="WeChat QR">
+      <div>請使用 WeChat 掃碼加入</div>
+      <div class="hint">📱 長按圖片可儲存或直接掃描</div>
+      <div class="copy" onclick="copyID()">點我複製微信ID</div>
+      <div class="close" onclick="closeModal()">關閉</div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('wechatModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('wechatModal').style.display = 'none';
+    }
+
+    function copyID() {
+      const id = "你的微信ID";
+      navigator.clipboard.writeText(id);
+      alert("已複製: " + id);
+    }
+  </script>
+
+</body>
+</html>
